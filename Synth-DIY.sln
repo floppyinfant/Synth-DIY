@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synth-DIY_DOCUMENTATION", "Synth-DIY0_DOCUMENTATION\Synth-DIY_DOCUMENTATION.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synth-DIY1", "Synth-DIY1\Synth-DIY1.vcxproj", "{D6C03DDB-0869-43F8-9031-4E45AA0AF5BE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synth-DIY2", "Synth-DIY2\Synth-DIY2.vcxproj", "{321A2FBD-DC1B-42D4-BCD3-8427028D7751}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synth-DIY4", "Synth-DIY4\Synth-DIY4.vcxproj", "{5A2CF250-8A45-477F-AB31-CECEB1A680B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Synth-DIY3", "Synth-DIY3\Synth_DIY2_APO.vcxproj", "{86FEE38C-18BD-4EA8-877C-84BD0D1BF3AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
+		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
+		{D6C03DDB-0869-43F8-9031-4E45AA0AF5BE}.Debug|x86.ActiveCfg = Debug|Win32
+		{D6C03DDB-0869-43F8-9031-4E45AA0AF5BE}.Debug|x86.Build.0 = Debug|Win32
+		{D6C03DDB-0869-43F8-9031-4E45AA0AF5BE}.Release|x86.ActiveCfg = Release|Win32
+		{D6C03DDB-0869-43F8-9031-4E45AA0AF5BE}.Release|x86.Build.0 = Release|Win32
+		{321A2FBD-DC1B-42D4-BCD3-8427028D7751}.Debug|x86.ActiveCfg = Debug|Win32
+		{321A2FBD-DC1B-42D4-BCD3-8427028D7751}.Debug|x86.Build.0 = Debug|Win32
+		{321A2FBD-DC1B-42D4-BCD3-8427028D7751}.Release|x86.ActiveCfg = Release|Win32
+		{321A2FBD-DC1B-42D4-BCD3-8427028D7751}.Release|x86.Build.0 = Release|Win32
+		{5A2CF250-8A45-477F-AB31-CECEB1A680B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{5A2CF250-8A45-477F-AB31-CECEB1A680B9}.Debug|x86.Build.0 = Debug|Win32
+		{5A2CF250-8A45-477F-AB31-CECEB1A680B9}.Release|x86.ActiveCfg = Release|Win32
+		{5A2CF250-8A45-477F-AB31-CECEB1A680B9}.Release|x86.Build.0 = Release|Win32
+		{86FEE38C-18BD-4EA8-877C-84BD0D1BF3AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{86FEE38C-18BD-4EA8-877C-84BD0D1BF3AB}.Debug|x86.Build.0 = Debug|Win32
+		{86FEE38C-18BD-4EA8-877C-84BD0D1BF3AB}.Release|x86.ActiveCfg = Release|Win32
+		{86FEE38C-18BD-4EA8-877C-84BD0D1BF3AB}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

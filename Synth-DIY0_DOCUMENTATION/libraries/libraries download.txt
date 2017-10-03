@@ -1,0 +1,49 @@
+// Synthesizer
+
+// Auduino
+// https://code.google.com/p/tinkerit/wiki/Auduino
+// https://learn.sparkfun.com/tutorials/build-an-auduino-step-sequencer
+
+// Mozzi
+// http://sensorium.github.io/Mozzi/
+// https://github.com/sensorium/Mozzi
+
+// MIDI
+// http://playground.arduino.cc/Main/MIDILibrary
+
+// MIDI (Buch Packt)
+// http://sourceforge.net/projects/arduinomidilib
+
+// OSC (Buch Packt)
+// http://github.com/recotana/ArdOSC
+
+
+// MIDI library
+#include <MIDI.h>
+/*
+MIDI is a serial protocol that operates at 31,250 bits per second. The Arduino's built-in serial port (all of them on the Mega as well) can send data at that rate.
+MIDI bytes are divided into two types: command bytes and data bytes. Command bytes are always 128 or greater, or 0x80 to 0xFF in hexadecimal. Data bytes are always less than 127, or 0x00 to 0x7F in hex. Commands include things such as note on, note off, pitch bend, and so forth. Data bytes include things like the pitch of the note to play, the velocity, or loudness of the note, and amount of pitch bend, and so forth. For more details, see the MIDI specification, or one of the many MIDI Protocol Guides on the Web.
+MIDI data is usually notated in hexadecimal because MIDI banks and instruments are grouped in groups of 16.
+*/
+
+// Adafruit Neopixels
+#include "Adafruit_NeoPixel.h"
+
+// alphanumeric Display
+#include <Wire.h>
+#include "Adafruit_LEDBackpack.h"
+#include "Adafruit_GFX.h"
+
+// Adafruit Trellis
+#include "Adafruit_Trellis.h"
+
+// Button Debounce
+
+// MUX
+
+// Shift Register
+
+// DAC
+
+// Rotary Encoder
+

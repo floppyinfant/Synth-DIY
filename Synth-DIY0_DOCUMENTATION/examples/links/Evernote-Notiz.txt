@@ -1,0 +1,66 @@
+siehe auch:
+Arduino Timer, Counter, Interrupts
+
+Project Synth-DIY
+
+PlatformIO
+
+C++ Notizen
+
+C++ References vs. Pointer
+
+
+Arduino/libraries:
+
+Sparkfun MIDI-Shield with 2 DAC
+https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/MIDI-CV
+https://github.com/sparkfun/MIDI_Shield/tree/V_1.5
+
+
+midi_cv.ino (Todd Treece)
+https://gist.github.com/toddtreece/5449fdb479ddadd0ed5b
+
+Adafruit FifteenStep Sequencer Library (Todd Treece)
+https://github.com/adafruit/FifteenStep
+
+Arduino MIDI library
+https://github.com/FortySevenEffects/arduino_midi_library
+https://github.com/FortySevenEffects/arduino_midi_library/wiki
+http://fortyseveneffects.github.io/arduino_midi_library/
+
+USB-MIDI
+https://github.com/rkistner/arcore
+
+
+Adafruit Capacitive Touch Drum Machine
+https://learn.adafruit.com/capacitive-touch-drum-machine/code
+
+
+
+Search on ixquick:
+https://www.ixquick.com/do/dsearch?query=https%3A%2F%2Fgithub.com%2Fadafruit%2FFifteenStep&cat=web&pl=opensearch&language=deutsch
+
+
+YouTube
+
+https://www.youtube.com/watch?v=__axacAtsck
+
+
+@see DAC CV LUT: ?
+
+
+Libraries:
+
+https://playground.arduino.cc/Main/LibraryList
+
+http://www.arduinolibraries.info/
+
+http://www.arduinolibraries.info/authors/adafruit
+
+http://www.arduinolibraries.info/libraries/blynk
+http://www.blynk.cc/
+
+
+
+
+

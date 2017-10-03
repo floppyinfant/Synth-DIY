@@ -1,0 +1,155 @@
+CV/ Gate
+
+Wikipedia CV/Gate
+https://en.wikipedia.org/wiki/CV/gate
+
+Sequencer CV/Gate
+https://www.sequencer.de/synth/index.php/CV_Gate
+
+Doepfer A-100
+http://www.doepfer.de/a100d.htm
+Doepfer Technische Hinweise (CV/ Gate)
+http://www.doepfer.de/a100_man/a100t_d.htm
+Doepfer Mechanische Hinweise (Frontplatten)
+http://www.doepfer.de/a100_man/a100m_d.htm
+Doepfer MCV4
+http://www.doepfer.de/mcv4.htm
+Doepfer R2M
+http://www.doepfer.de/R2M.htm
+
+Schneidersladen
+http://www.schneidersladen.de/de/midi-din-sync/midi-to-cv-interface.html
+
+Korg SQ-1
+http://www.korg.com/de/products/dj/sq_1/
+Die CV-Technik des MS-20 verwendete den Hz/V-Standard.
+Darüber hinaus wird aber vom SQ-1 auch der V/Oct-Standard unterstützt, wobei man sogar den Spannungspegel des CV-Ausgangs (V/Oct-Unterstützung für 1 V, 2 V und 5 V; Hz/V-Unterstützung für 8 V) und die Polarität des GATE-Ausgangs auf das angeschlossene Gerät abstimmen kann.
+
+Arturia MatrixBrute, MiniBrute, MicroBrute
+https://www.arturia.com/products
+
+MFOS
+Noise Toaster (Adding external VCO Voltage Control Mod)
+http://musicfromouterspace.com/analogsynth_new/NOISETOASTER/NOISETOASTER.php#MODS
+http://musicfromouterspace.com/analogsynth_new/THE_CAVE/MIDI%20to%20CV%20Old%20Design%20I/midi2cv.htm
+
+Korg monotron Mod
+Search Google: cv gate arduino korg monotron
+
+
+----------------------------------------------------
+
+MIDI
+https://de.wikipedia.org/wiki/Musical_Instrument_Digital_Interface
+https://en.wikipedia.org/wiki/MIDI
+https://www.midi.org/
+avr midi
+https://www.mikrocontroller.net/articles/MIDI
+
+https://github.com/FortySevenEffects/arduino_midi_library/
+http://www.instructables.com/id/Send-and-Receive-MIDI-with-Arduino/
+
+OSC
+https://de.wikipedia.org/wiki/Open_Sound_Control
+https://en.wikipedia.org/wiki/Open_Sound_Control
+http://opensoundcontrol.org/
+TouchOSC
+https://hexler.net/docs/touchosc
+Wiimote and OSCulator | GlovePIE
+https://osculator.net/
+https://sites.google.com/site/carlkenner/glovepie_download
+Pure Data
+https://puredata.info/downloads/osc
+http://write.flossmanuals.net/pure-data/osc/
+OSC for Arduino
+https://github.com/CNMAT/OSC
+https://trippylighting.com/teensy-arduino-ect/touchosc-and-arduino-oscuino/
+http://hackaday.com/2011/03/27/arduino-and-open-sound-control-without-an-ethernet-shield/
+Ableton Live
+https://www.ableton.com/de/packs/connection-kit/
+https://github.com/Ableton/m4l-connection-kit/blob/master/Arduino/Firmata/StandardFirmata.ino
+
+VSTi
+
+
+----------------------------------------------------
+
+Code examples
+
+
+MIDI-CV.ino by SparkFun Electronics, October 2, 2015
+MIDI to Control Voltage converter for synthesizers.
+https://github.com/sparkfun/MIDI_Shield/tree/V_1.5/Firmware/MIDI-CV
+
+midi_cv.ino by Todd Treece, Adafruit
+A MIDI sequencer example using two MCP4725 dacs for eurorack control voltage output and NeoPixels for display.
+https://gist.github.com/toddtreece/5449fdb479ddadd0ed5b
+
+Adafruit FifteenStep Sequencer Library
+https://github.com/adafruit/FifteenStep
+
+
+----------------------------------------------------
+
+Sync
+
+24ppqn clock pulse, and a start/stop signal voltage (5v for start, 0v for stop)
+
+24 clock pulses per quarter note
+24/4=6 pulses per 16th note
+... for Tripplets
+
+
+Note type;	Divide ratio;
+ 
+Crotchets              24
+Crotchet triplets      16
+Quavers                12
+Quaver triplets         8
+Semiquavers             6
+Semiquaver triplets     4
+Demisemiquavers         3
+Demisemiquaver triplets 2
+
+
+----------------------------------------------------
+
+Pitch outputs
+-------------
+CV - (V/oct)
+------------
+On the PRO-2, this has a range of -1V to +4V (5 octaves), with a pitch bend range of +/-1V (+/- 1 octave).
+
+On the PRO-4, this has a range of -1V to +6V (7 octaves), with a pitch bend range of +/-2V (+/- 2 octaves). It also has transpose (+/- 24 semitone range).
+
+This will control the pitch of all types of V/oct synths, including Roland, Sequential Circuits, Oberheim, Octave, ARP, Moog.
+
+
+Hz/V (usually optional)
+-----------------------
+On the PRO-2, this has a range of 0.25V to 14V, (5.5 octaves) with a pitch bend range of +/- 1 octave.
+
+On the PRO-4, this has a range of 0.0625V to approx 13V, (7.5 octaves) with a pitch bend range of +/- 2 octave. It also has transpose (+/- 24 semitone range).
+
+This will control the pitch of all types of Hz/V synths including Yamaha and Korg.
+
+
+GATE outputs
+------------
+This gives +15V for on, and 0V for off.
+
+By providing a +15V GATE output, the PRO-2/4 can control just about all synths that use a GATE input.
+
+
+S-TRIG & TRIG outputs
+---------------------
+The PRO-4 has 7 triggering options selectable in the software to be sure there is nothing the PRO-4 can't interface with. The PRO-2 has three triggering options (GATE, S-TRIG and TRIG, the more common types).
+
+The two main types of trigger worth mentioning are;
+
+S-Trig - This provides the different type of GATE signal required to control synths such as Yamaha, Korg, and Moog.
+Trigger - Used to trigger ARP envelopes or analogue sequencers.
+
+There is no dedicated trigger output on the PRO-2 like there is on the PRO-4, but one of the AUX outputs on the PRO-2 can be configured to be a trigger instead of an auxiliary.
+
+

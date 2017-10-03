@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="docs">
+      <UniqueIdentifier>{a6d7ac35-5a73-424c-8743-0ce106340987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{e4906952-3dae-46d5-b9d0-7bc765ae420b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CAD">
+      <UniqueIdentifier>{26dd6fdd-69c2-4c85-8228-041d0f7bc1bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\README.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\Synth-DIY Workstation_4.pdf">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="Synth-DIY_DOCUMENTATION.ino" />
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\xRlIuTsSMoE.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\tweet_button.55a4019ea66c5d005a6e6d9d41c5e068.de.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\sh.06e97863.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB).htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\ping.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\like.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\hub.37638732bcf6df3115558c59e29ab4be.htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\hub.37638732bcf6df3115558c59e29ab4be(1).htm">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\links\_links.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="examples\Sequencer\Sparkfun_Auduino_Step-Sequencer\auduino_step-sequencer.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Auduino\auduino_v5.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\basic\basic.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\ble_neopixel_mpr121\ble_neopixel_mpr121.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\dac-integration-test\dac-integration-test.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Groovesizer_RED_037\Groovesizer_RED_037.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Groovesizer_v0_19\Groovesizer_v0_19.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Groovesizer_RED_037\HandleMidi.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Groovesizer_RED_037\HelperFunctions.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\midi_cv.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\MIDI-CV.ino">
+      <Filter>examples</Filter>
+    </None>
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\neo_mpr121\neo_mpr121.ino">
+      <Filter>examples</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.Synth_DIY2_docs.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="__vm\.Synth-DIY0_DOCUMENTATION.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DEVICES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\ble_neopixel_mpr121\BluefruitConfig.h">
+      <Filter>examples</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\FifteenStep.h">
+      <Filter>examples</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\notemap.h">
+      <Filter>examples</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs\build_and_test_output.txt">
+      <Filter>docs</Filter>
+    </Text>
+    <Text Include="docs\Memory-Consumption.txt">
+      <Filter>docs</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\Devices\Debouncing\adafruit_debouncing.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Adafruit_alphanum-display\alphanum_display.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Debouncing\bounce2_debouncing.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\code_fragments.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\FifteenStep.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Shift_Register_and_MUX\mux.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Debouncing\my_debouncing.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\my_global_variables.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\NeoPattern\NeoPattern.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Neopixels_and_LED\neopixels.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\notemap.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Shift_Register_and_MUX\shift.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="examples\Devices\Adafruit_Trellis\trellis.c">
+      <Filter>examples</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

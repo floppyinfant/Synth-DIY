@@ -1,0 +1,214 @@
+Arduino
+https://www.arduino.cc/en/Reference/HomePage
+
+AVR LibC
+http://www.nongnu.org/avr-libc/user-manual/index.html
+
+Wiring
+http://wiring.org.co/reference/
+
+Mikrocontroller - Bitmanipulation
+https://www.mikrocontroller.net/articles/Bitmanipulation
+
+
+
+Arduino Timer, Counter, Interrupts
+used for: PWM, set voltage (CV), fade LED, tone generator
+
+Timer0 8-bit PIN D5, D6
+Timer1 16-bit PIN D9, D10
+Timer2 8-bit PIN D3, D11
+
+PWM
+analogWrite(myPWMpin, 128); // Outputs a square wave
+tone()
+
+Adafruit Multi-tasking the Arduino 
+https://learn.adafruit.com/multi-tasking-the-arduino-part-2/timers
+
+Arduino SecretsOfArduinoPWM
+https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
+
+Atmel AVR ATmega328P
+http://www.atmel.com/Images/Atmel-2505-Setup-and-Use-of-AVR-Timers_ApplicationNote_AVR130.pdf
+
+Library
+https://playground.arduino.cc/Main/LibraryList#Timing
+------
+elapsedMillis
+------
+SimpleTimer (uses millis)
+https://playground.arduino.cc/Code/SimpleTimer
+https://github.com/marcelloromani/arduino/tree/master/SimpleTimer
+// example
+#include <SimpleTimer.h>
+SimpleTimer timer;
+void setup() {
+    timer_id = timer.setInterval(10000, callback);
+}
+void loop() {
+    timer.run();
+    // timer.restartTimer(timer_id);
+}
+------
+Metro
+https://github.com/thomasfredericks/Metro-Arduino-Wiring
+------
+Timer (uses millis)
+https://playground.arduino.cc/Code/Timer
+https://github.com/JChristensen/Timer
+// example
+#include "Timer.h"
+Timer t;
+void setup() {
+    t.every(ms, callback);
+    // after(); pulse(); oscillate();
+}
+void loop(void) {
+    t.update();
+}
+------
+SimpleTimer
+https://github.com/prampec/arduino-softtimer/tree/master
+https://github.com/prampec/arduino-softtimer/blob/wiki/SoftTimer.md
+
+Timers using Interrupts
+
+TimerOne (uses Interrupts)
+https://playground.arduino.cc/Code/Timer1
+https://github.com/PaulStoffregen/TimerOne
+// example
+#include "TimerOne.h"
+void setup() {
+    Timer1.initialize(1*1000000);
+    Timer1.attachInterrupt(callback);
+}
+------
+MsTimer2 (uses Interrupts)
+https://playground.arduino.cc/Main/MsTimer2
+https://github.com/PaulStoffregen/MsTimer2
+//example
+#include <MsTimer2.h>
+void setup() {
+    MsTimer2::set(ms, callback);
+    MsTimer2::start();
+}
+Heise
+https://www.heise.de/developer/artikel/Timer-Counter-und-Interrupts-3273309.html
+Kurzfassung:
+initcount = maxcount - deltaT * cpufreq / prescale
+initcount = 65.536 - (0.5 * 16.000.000/256) = 34.286
+Erklärung:
+Wir haben es mit folgenden Parametern zu tun:
+
+    bits definiert die Größe des Zählerregister in Bits, etwa 16 für einen 16-Bit-Timer.
+    maxcount entspricht dem maximalen Zahlenwerts 2bits.
+    prescale ist der oben erläuterte konfigurierbare Prescalewert, also die Zahl der Taktzyklen bis ein weiteres Inkrementieren des Timeregisters erfolgt.
+    cpufreq repräsentiert die CPU-Frequenz. Der Taktzyklus berechnet sich folglich aus 1 / cpufreq.
+    initcount ist der vorbelegte Startwert des Zählregisters.
+    count ist die notwendige Zahl von Inkrementierungen, um einem Timeroverflow auszulösen. Es gilt: count = maxcount - initcount.
+    deltaT bezeichnet das gewünschte Zeitintervall bis zum Auslösen des Timer-Overflows. Man könnte auch definieren: deltaT = 1 / timerfreq (gewünschte Zahl von Timer Overflows pro Sekunde).
+
+Es gilt:
+prescale / cpufreq * count = deltaT 
+=> count = deltaT * cpufreq / prescale
+=> maxcount - initcount = deltaT * cpufreq / prescale
+=> initcount = maxcount - deltaT * cpufreq / prescale
+Beispielsrechnung: 
+Alle 0,5 Sekunden soll ein Timer-Overflow-Interrupt stattfinden.
+
+    Wir verwenden einen 16-Bit-Timer: bits = 16 => maxcount = 216 = 65536.
+    Wir benötigen einen Timer Overflow pro halbe Sekunde. deltaT = 0,5 sec = 1 / timerfreq
+    Die Taktfrequenz des Arduino-Board beträgt cpufreq = 16 MHz = 16.000.000 Hz
+    Als Prescale-Wert liegt prescale = 256 vor.
+
+Der Timer startet statt mit 0 mit folgendem Anfangszählerstand:
+initcount = 65.536 - (0.5 * 16.000.000/256) = 34.286
+Das Timer-Register muss initial mit 34.286 starten, damit bis zum Timer Overflow – bei Überschreiten von 65.536 – genau eine halbe Sekunde vergeht. In jedem Durchlauf der Interrrupt-Service-Routine ist der Zähler jeweils wieder mit 34.286 zu initialisieren.
+----
+#define ledPin 13
+void setup()
+{
+  pinMode(ledPin, OUTPUT);
+  // Timer 1
+  noInterrupts();                    // Alle Interrupts temporär abschalten
+  TCCR1A = 0;
+  TCCR1B = 0;
+  TCCR1B |= (1 << CS12);   // 256 als Prescale-Wert spezifizieren
+  TCNT1 = 34286;               // Timer nach obiger Rechnung vorbelegen
+  TIMSK1 |= (1 << TOIE1);   // Timer Overflow Interrupt aktivieren
+  interrupts();                        // alle Interrupts scharf schalten
+}
+// Interruptserviceroutine für den Timer Overflow
+ISR(TIMER1_OVF_vect)        
+{
+  TCNT1 = 34286;              // Zähler erneut vorbelegen
+  digitalWrite(ledPin, digitalRead(ledPin) ^ 1); // LED ein und aus
+}
+void loop() {  }
+----
+#define ledPin 13
+void setup()
+{
+  pinMode(ledPin, OUTPUT);
+  // Timer 1
+  noInterrupts();                        // Alle Interrupts temporär abschalten
+  TCCR1A = 0;
+  TCCR1B = 0;
+  TCCR1B |= (1 << CS12);       // 256 als Prescale-Wert spezifizieren
+  TCNT1 = 0;                            // Register mit 0 initialisieren
+  OCR1A = 31250;                  // Output Compare Register vorbelegen 
+  TIMSK1 |= (1 << OCIE1A);   // Timer Compare Interrupt aktivieren
+  interrupts();                           // alle Interrupts scharf schalten
+}
+// Interruptserviceroutine für den Timer Compare Interrupt
+ISR(TIMER1_COMPA_vect)        
+{
+  digitalWrite(ledPin, digitalRead(ledPin) ^ 1); // LED ein und aus
+}
+void loop() {  }
+
+https://arduino-info.wikispaces.com/Arduino-PWM-Frequency
+
+Interrupts
+
+
+attachInterrupt()
+detachInterrupt()
+
+interrupts()
+noInterrupts()
+cli()  // interrupts ausschalten 
+sei() // interrupts einschalten 
+
+
+/* Quelle: POV_Globe_SPI.ino, MAKE? */
+ISR(INT0_vect)
+{
+    EICRA = _BV(ISC01);  // interrupt wird bei fallender Flanke ausgelöst 
+    EIMSK |= _BV(INT0);  // hardware interrupt einschalten
+}
+
+
+Encoder
+http://playground.arduino.cc/Main/RotaryEncoders#Example1
+
+ISR(INT0_vect){
+int a;
+a = PIND & 0x0c;
+if ((a == 0x0c) || (a == 0)){
+encoderCount++;
+}
+else {
+encoderCount--;
+}
+}
+void setupPinInterrupt(){
+  EICRA = 0x01; //int0 on pinchange
+  EIMSK = 0x01; //enable interrupt 0
+  EIFR = 0; //clear flags
+}
+
+
+
+

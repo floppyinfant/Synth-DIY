@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
+    <RootNamespace>Synth_DIY2_docs</RootNamespace>
+    <ProjectName>Synth-DIY_DOCUMENTATION</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\arduino-1.8.2\libraries;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\arduino\avr\libraries;$(ProjectDir)..\..\libraries;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\arduino\avr\cores\arduino;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\arduino\avr\variants\eightanaloginputs;$(ProjectDir)..\Synth-DIY0_DOCUMENTATION;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\tools\avr\avr\include\;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\tools\avr\avr\include\avr\;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\tools\avr\lib\gcc\avr\4.8.1\include;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\tools\avr\lib\gcc\avr\4.9.2\include;$(ProjectDir)..\..\..\arduino-1.8.2\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.Synth-DIY0_DOCUMENTATION.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=10802;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="VisualMicro" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="docs\README.md" />
+    <None Include="docs\Synth-DIY Workstation_4.pdf" />
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB).htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\hub.37638732bcf6df3115558c59e29ab4be(1).htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\hub.37638732bcf6df3115558c59e29ab4be.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\like.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\ping.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\sh.06e97863.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\tweet_button.55a4019ea66c5d005a6e6d9d41c5e068.de.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\Devices\Rotary_Encoder\docs\Rotary Encoder Breakout - Illuminated (RG RGB)_files\xRlIuTsSMoE.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="examples\links\_links.html" />
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\basic\basic.ino" />
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\ble_neopixel_mpr121\ble_neopixel_mpr121.ino" />
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\neo_mpr121\neo_mpr121.ino" />
+    <None Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\midi_cv.ino" />
+    <None Include="examples\Sequencer\Auduino\auduino_v5.ino" />
+    <None Include="examples\Sequencer\Groovesizer_RED_037\Groovesizer_RED_037.ino" />
+    <None Include="examples\Sequencer\Groovesizer_RED_037\HandleMidi.ino" />
+    <None Include="examples\Sequencer\Groovesizer_RED_037\HelperFunctions.ino" />
+    <None Include="examples\Sequencer\Groovesizer_v0_19\Groovesizer_v0_19.ino" />
+    <None Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\dac-integration-test\dac-integration-test.ino" />
+    <None Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\MIDI-CV.ino" />
+    <None Include="examples\Sequencer\Sparkfun_Auduino_Step-Sequencer\auduino_step-sequencer.ino" />
+    <None Include="Synth-DIY_DOCUMENTATION.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DEVICES.h" />
+    <ClInclude Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\examples\ble_neopixel_mpr121\BluefruitConfig.h" />
+    <ClInclude Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\FifteenStep.h" />
+    <ClInclude Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\notemap.h" />
+    <ClInclude Include="__vm\.Synth-DIY0_DOCUMENTATION.vsarduino.h" />
+    <ClInclude Include="__vm\.Synth_DIY2_docs.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs\build_and_test_output.txt" />
+    <Text Include="docs\Memory-Consumption.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="examples\code_fragments.c" />
+    <ClCompile Include="examples\Devices\Adafruit_alphanum-display\alphanum_display.c" />
+    <ClCompile Include="examples\Devices\Adafruit_Trellis\trellis.c" />
+    <ClCompile Include="examples\Devices\Debouncing\adafruit_debouncing.c" />
+    <ClCompile Include="examples\Devices\Debouncing\bounce2_debouncing.cpp" />
+    <ClCompile Include="examples\Devices\Debouncing\my_debouncing.cpp" />
+    <ClCompile Include="examples\Devices\NeoPattern\NeoPattern.cpp" />
+    <ClCompile Include="examples\Devices\Neopixels_and_LED\neopixels.c" />
+    <ClCompile Include="examples\Devices\Shift_Register_and_MUX\mux.c" />
+    <ClCompile Include="examples\Devices\Shift_Register_and_MUX\shift.c" />
+    <ClCompile Include="examples\my_global_variables.cpp" />
+    <ClCompile Include="examples\Sequencer\Adafruit_Todd_Treece_FifteenStep_MIDI-CV\FifteenStep\FifteenStep.cpp" />
+    <ClCompile Include="examples\Sequencer\Sparkfun-MIDI-Shield_MIDI-CV\MIDI-CV\notemap.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM3" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,49 @@
+/** MEMORY */
+
+
+// Arduino Nano
+//  2 kB SRAM
+//  1 kB EEPROM
+// 32 kB Flash Memory - 2 kB bootloader
+
+
+// ESP8266
+// 32k + 80k RAM
+// 512k - 16MB Flash Memory
+// 17 GPIO
+// 1 ADC
+// 80 - 160 MHz CPU Speed
+// 10uA - 170mA Current Consumption
+// 3.3V
+
+// NodeMCU DevKit V0.9 (CH340 based)
+// https://github.com/nodemcu/nodemcu-devkit
+// NodeMCU DevKit V1.0 (CP2012 based)
+// https://github.com/nodemcu/nodemcu-devkit-v1.0
+// 4MB Flash
+
+
+// calculation:
+// EEPROM memory consumption:
+// 256 bytes * 8 * 8 = 
+// + 8 bytes (potis)
+// + 16 bytes (buttons)
+// + 19 bytes (params)
+// ---------
+// 811 bytes
+//
+// PROGMEM
+// + 3 * 33 (CHORDS) = 99 bytes
+// + Sum 7,7,7,7,5,5,6,8,12,3,3,4,4,4,4,3,3,3,4,5,5,5,4,5,4,4,5,4,4,4,4,5,5 (SCALES)= 162 bytes
+// ---------
+// 261 bytes
+//
+// Sum ____ bytes
+
+// -----------------------------------------------------------------------------
+
+// 14.05.2017
+Compiling debug version of 'Synth_DIY2' for 'Arduino Nano w/ ATmega328'
+Program size: 8.108 bytes (used 26% of a 30.720 byte maximum) (7,13 secs)
+Minimum Memory Usage: 1097 bytes (54% of a 2048 byte maximum)
+

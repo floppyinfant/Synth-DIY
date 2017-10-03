@@ -1,0 +1,1 @@
+// dummy version of emos2.js //

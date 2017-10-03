@@ -1,0 +1,85 @@
+Synthesizer_Workstation
+
+Test and Build output
+
+
+// compiler output:
+// without 3rd Party Libraries
+// Der Sketch verwendet 4.460 Bytes (13%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 727 Bytes (35%) des dynamischen Speichers, 1.321 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// with Bounce2.h, SimpleTimer.h
+// Der Sketch verwendet 4.460 Bytes (13%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 727 Bytes (35%) des dynamischen Speichers, 1.321 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// and PCM.h
+// Der Sketch verwendet 4.684 Bytes (14%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 736 Bytes (35%) des dynamischen Speichers, 1.312 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// and Wire.h
+// Der Sketch verwendet 5.472 Bytes (16%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 934 Bytes (45%) des dynamischen Speichers, 1.114 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// and Adafruit DAC
+// Der Sketch verwendet 5.696 Bytes (17%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 943 Bytes (46%) des dynamischen Speichers, 1.105 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// and Adafruit alpha4
+// Der Sketch verwendet 5.696 Bytes (17%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 943 Bytes (46%) des dynamischen Speichers, 1.105 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// and Trellis
+// Der Sketch verwendet 5.916 Bytes (18%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 1.007 Bytes (49%) des dynamischen Speichers, 1.041 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// and Neopixels
+// Der Sketch verwendet 6.706 Bytes (20%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 1.030 Bytes (50%) des dynamischen Speichers, 1.018 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+
+
+// without object declarations
+// Der Sketch verwendet 5.696 Bytes (17%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 943 Bytes (46%) des dynamischen Speichers, 1.105 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// with objects and their libraries
+// Der Sketch verwendet 6.808 Bytes (21%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 1.322 Bytes (64%) des dynamischen Speichers, 726 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+
+// ---------------------------------
+
+// with all Libraries and structures
+// Der Sketch verwendet 10.502 Bytes (32%) des Programmspeicherplatzes. Das Maximum sind 32.256 Bytes.
+// Globale Variablen verwenden 2.698 Bytes (131%) des dynamischen Speichers, -650 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// commented out sclaes.h, pitches.h
+// Globale Variablen verwenden 2.615 Bytes (127%) des dynamischen Speichers, -567 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// NUM_PATTERN 1 (before 8), NUM_STEPS 16 (before 32)
+// Globale Variablen verwenden 1.684 Bytes (82%) des dynamischen Speichers, 364 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// with scales.h and pitches.h again
+// Globale Variablen verwenden 1.796 Bytes (87%) des dynamischen Speichers, 252 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// NUM_ ... anything set to 1
+// Globale Variablen verwenden 1.684 Bytes (82%) des dynamischen Speichers, 364 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+// Globale Variablen verwenden 1.908 Bytes (93%) des dynamischen Speichers, 140 Bytes für lokale Variablen verbleiben. Das Maximum sind 2.048 Bytes.
+
+
+///////////////////////////////////////////////////////////
+// Conclusions:
+// sketch (without libraries or structures)  727 byte (35%)
+// Bounce2, SimpleTimer, PCM                   9
+// Wire                                      198
+// Adafruit DAC                                9
+// Adafruit alpha4                             0
+// Adafruit Trellis                           64
+// Adafruit Neopixels                         23
+// objects (structs)                         292
+// (davon hardware 87, scales | pitches 112)
+//                                          ----
+// sum                                      1322 byte (64%)
+///////////////////////////////////////////////////////////
+
